@@ -16,7 +16,7 @@ if st.button("Analyze Repo") and repo_url:
             response = requests.post(
                 API_URL, 
                 json={"repo_url": repo_url.strip()},  # Extra spaces hatao
-                timeout=20
+                timeout=120
             )
             if response.status_code == 200:
                 data = response.json()
