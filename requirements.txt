@@ -6,3 +6,4 @@ pandas
 matplotlib
 langchain-community
 python-multipart  # For file uploads
+pytest>=7.0.0
