@@ -6,11 +6,8 @@ st.set_page_config(page_title="RepoInsight Agent", layout="centered")
 st.title("🔍 RepoInsight Agent")
 st.markdown("Enter a **public GitHub repo URL** to get instant insights!")
 
-# Auto-detect deployment environment
-if os.getenv("RENDER"):
-    API_URL = "https://ds-agent-production.onrender.com/analyze"  # Replace with your actual Render URL
-else:
-    API_URL = "http://localhost:8000/analyze"
+# Direct Render URL use karo (Streamlit Cloud se bhi kaam karega)
+API_URL = "https://ds-agent-production.onrender.com/analyze"  # Space hata diya!
 
 repo_url = st.text_input("GitHub Repo URL", placeholder="https://github.com/langchain-ai/langgraph")
 
